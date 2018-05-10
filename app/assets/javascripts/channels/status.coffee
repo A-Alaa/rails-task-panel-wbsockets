@@ -8,4 +8,6 @@ App.status = App.cable.subscriptions.create "StatusChannel",
   received: (data) ->
     for td in $('.alg-id')
       if data['updated_algorithm'].id == parseInt( td.textContent )
-        $(td.parentNode).find(".status").text( data['updated_algorithm'].status )
+        node = $(td.parentNode).find(".status")
+        node.text( data['updated_algorithm'].status )
+        node.attr("class","status #{data['updated_algorithm'].status}")

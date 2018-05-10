@@ -1,3 +1,16 @@
 // Place all the styles related to the algorithms controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$enable-flex: true;
+@import 'bootstrap';
+
+
+.pending
+{
+  color:orangered;
+}
+
+.ready
+{
+  color:green;
+}

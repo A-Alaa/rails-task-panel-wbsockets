@@ -1,4 +1,4 @@
-<table id="algorithms">
+<table class="table table-bordered table-dark" id="algorithms">
   <thead>
   <tr>
     <th>
@@ -21,7 +21,14 @@
       <td class="alg-id"><%= algorithm.id %> </td>
       <td><%= algorithm.input %></td>
       <td><%= algorithm.duration %></td>
-      <td class="status"><%= algorithm.status %></td>
+
+      <% if algorithm.status == "ready" %>
+        <td class="status ready">
+      <% else %>
+        <td class="status pending">
+      <% end %>
+        <%= algorithm.status %>
+      </td>
     </tr>
     <% end %>
   </tbody>
